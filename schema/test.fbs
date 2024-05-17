@@ -1,8 +1,12 @@
 namespace TestFb;
 
-table object_positions {
-    obj_1:Vec2;
-    obj_2:Vec2
+struct Vec2 {
+  x:float;
+  y:float;
 }
 
-root_type Server;
+table object_positions {
+    obj_1:Vec2;
+    obj_2:Vec2;
+}
+
