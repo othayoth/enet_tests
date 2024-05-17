@@ -1,0 +1,8 @@
+namespace TestFb;
+
+table object_positions {
+    obj_1:Vec2;
+    obj_2:Vec2
+}
+
+root_type Server;
