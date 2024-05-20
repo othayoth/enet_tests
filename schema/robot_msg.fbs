@@ -1,0 +1,13 @@
+namespace RobotFlatBuffer;
+
+table pos_img {
+  x:float;
+  y:float;
+}
+
+table robot_msg {
+    obj_a:pos_img;
+    obj_b:pos_img;
+}
+
+root_type robot_msg;
