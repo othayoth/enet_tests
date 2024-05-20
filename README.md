@@ -13,3 +13,4 @@ code snippets for initial enet tests
 - usually, there is a flatbuffer submodule under `third_party`
 - build it using [these](https://github.com/google/flatbuffers?tab=readme-ov-file#quick-start) instructions
 - generate code from a schema : `cd schema && ./parse_schema` -- this will generate `*_generated.h` files 
+- if you need a mutating flatbuffer, use the `--gen-mutable` flag after calling the executable

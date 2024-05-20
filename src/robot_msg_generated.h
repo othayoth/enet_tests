@@ -163,6 +163,10 @@ inline bool VerifySizePrefixedrobot_msgBuffer(
   return verifier.VerifySizePrefixedBuffer<RobotFlatBuffer::robot_msg>(nullptr);
 }
 
+inline const char *robot_msgExtension() {
+  return "bfbs";
+}
+
 inline void Finishrobot_msgBuffer(
     ::flatbuffers::FlatBufferBuilder &fbb,
     ::flatbuffers::Offset<RobotFlatBuffer::robot_msg> root) {

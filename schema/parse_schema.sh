@@ -1,1 +1,1 @@
-../third_party/flatbuffers/flatc --schema test.fbs --cpp 
+../third_party/flatbuffers/flatc --gen-mutable --schema robot_msg.fbs --cpp 
