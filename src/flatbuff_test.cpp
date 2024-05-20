@@ -91,7 +91,9 @@ int main(int argc, char ** argv)
     int size = builder_cbot.GetSize(); // Returns the size of the buffer that
                               // `GetBufferPointer()` points to.
 
+    
 
+    // reading a flatbuffer
     auto cbot_msg_copy = Getrobot_msg(buffer_pointer);
     auto obj_a_copy = cbot_msg_copy->obj_a();
     auto obj_b_copy = cbot_msg_copy->obj_b();
@@ -99,6 +101,16 @@ int main(int argc, char ** argv)
     std::cout << "Obj 1 x=" << obj_a_copy->x()<< "  y=" << obj_a_copy->y() << std::endl;
     std::cout << "Obj 2 x=" << obj_b_copy->x()<< "  y=" << obj_b_copy->y() << std::endl;
     
+    // mutating a mutable flatbuffer
+    auto cbot_msg_mutable = GetMutablerobot_msg(buffer_pointer);
+
+    std::cout <<"before mutating" << std::endl;  
+    std::cout << "Obj 1 x_new=" << cbot_msg_copy->obj_a()->x()<< "  x_orig=" << cbot_msg_mutable->obj_a()->x() << std::endl;        
+  
+    cbot_msg_mutable->mutable_obj_a()->mutate_x(10.0f);
+    
+    std::cout <<"after mutating" << std::endl;      
+    std::cout << "Obj 1 x_new=" << cbot_msg_copy->obj_a()->x()<< "  x_orig=" << cbot_msg_mutable->obj_a()->x() << std::endl;        
   
 
 
