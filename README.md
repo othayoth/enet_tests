@@ -14,7 +14,7 @@ code snippets for initial enet tests
 - build it using [these](https://github.com/google/flatbuffers?tab=readme-ov-file#quick-start) instructions
 - generate code from a schema : `cd schema && ./parse_schema` -- this will generate `*_generated.h` files 
 - if you need a mutating flatbuffer, use the `--gen-mutable` flag after calling the executable
-- for mutating flatbuffer, you might have to set all the fields first ? [VERIFY & CORRECT]
+- for mutating flatbuffer, you might have to set all the fields first
 
 #### how are fb sent to and forth between two programs using enet?
 - 1. robot_signal_builder (struct) : has flatbufferbuilder, enet_server, and an enet_peer
